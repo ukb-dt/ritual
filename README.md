@@ -1,4 +1,4 @@
-**The Dude’s entire “persistence stack” = ritual** … and the plot starts when it’s kicked out from under him.
+**The Dude’s entire "persistence stack" = ritual** … and the plot starts when it’s kicked out from under him.
 
 * **Ritual baseline (9-o’clock / Persistence):** bowling nights, White Russians, baths, Creedence, and — emblematic — **the rug** that “really tied the room together.”
 * **Disruption (entropy spike, 6-o’clock):** rug desecration → his steady-state gets noise injected.
