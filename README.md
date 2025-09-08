@@ -21,9 +21,6 @@ If you want the neuron to show this cleanly, add an **exogenous shock** into the
 TL;DR: stories begin when **rituals (persistence)** break. Your diagram reads perfectly: **persistence node perturbed → soma computes → new policy down the axon.**
 
 # B
-💯 exactly, Pyromancer. That’s why *The Dude* is such an elegant counter-Hamlet:
-
----
 
 ## 🌀 The Dude vs. The Pentad
 
@@ -54,4 +51,4 @@ The Dude dramatizes the *sieve you drew*:
 * When **ritual persistence breaks**, the soma is forced to splice with **strategy/variation** to survive.
 * But unlike Hamlet, he doesn’t stay there. His gift is returning to persistence after surviving entropy.
  
-Would you like me to **edit your neuron SVG** so the 12 o’clock dendrite has a glowing annotation — “STRATEGY (The Dude’s forced zone)” — with a red dashed pulse feeding into it from the rug breach at 9 o’clock? That way you can see, visually, how he’s pushed out of his comfort branch.
+ 
