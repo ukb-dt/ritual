@@ -1,0 +1,191 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- ====== Theme ====== -->
+  <defs>
+    <linearGradient id="axonGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8ab4ff"/>
+      <stop offset="100%" stop-color="#7ff0d9"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#b5c7ff"/>
+    </marker>
+    <marker id="feedbackArrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+      <path d="M8,0 L0,4 L8,8 Z" fill="#ff6b6b"/>
+    </marker>
+    <style>
+      .bg{fill:#0a0f1c}
+      .wire{fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#e6edf3;font:700 12px/1.2 Inter,system-ui,Arial}
+      .small{fill:#b7c8cf;font:600 11px/1.2 Inter,system-ui,Arial}
+      .micro{fill:#d0dde6;font:600 10px/1.2 Inter,system-ui,Arial}
+      .pill{fill:#111726;stroke:#2b3347;stroke-width:1.5}
+      .pill text{fill:#c7d4ff;font:700 11px/1.2 Inter,system-ui,Arial}
+      .gate{fill:#111726;stroke:#3a556a;stroke-width:2}
+      .gate text{fill:#ffffff;font:700 10px/1.2 Inter,system-ui,Arial}
+      .somaRing{fill:#0d1324;stroke:#6bd3c3;stroke-width:4}
+      .somaCore{fill:#10182e;stroke:#7ff0d9;stroke-width:2}
+      .dot{fill:#7ff0d9}
+      .node{fill:#141b2d;stroke:#546a9a;stroke-width:2}
+      .node text{fill:#ffffff;font:700 11px/1.2 Inter,system-ui,Arial}
+      .legend{fill:#ffffff;font:800 16px/1.2 Inter,system-ui,Arial}
+      .sub{fill:#cfd8ff;font:600 12px/1.2 Inter,system-ui,Arial}
+      .ghost{fill:#0a0f1c;stroke:#2a364d;stroke-dasharray:4 6}
+      .feedback{fill:none;stroke:#ff6b6b;stroke-width:3;stroke-dasharray:8 4}
+    </style>
+  </defs>
+
+  <!-- ====== Background ====== -->
+  <rect class="bg" width="1200" height="800"/>
+
+  <!-- ====== Afferent dendrites (12, 9, 6 o'clock) ====== -->
+  <!-- 12 o'clock: Biology / Variation / Experience (LOVE) -->
+  <path class="wire" stroke="#ff7f9a" stroke-width="6"
+        d="M600,100 C590,180 590,220 600,280" marker-end="url(#arrow)"/>
+  <path class="wire" stroke="#ff7f9a" stroke-width="3" d="M585,160 C560,150 540,140 520,130"/>
+  <path class="wire" stroke="#ff7f9a" stroke-width="3" d="M615,160 C640,150 660,140 680,130"/>
+
+  <!-- 9 o'clock: Ontology / Persistence / Rituals (HOPE) -->
+  <path class="wire" stroke="#4ecdc4" stroke-width="6"
+        d="M100,400 C220,390 320,380 420,385 C450,386 470,389 490,394" marker-end="url(#arrow)"/>
+  <path class="wire" stroke="#4ecdc4" stroke-width="3" d="M250,360 C260,370 280,380 300,386"/>
+  <path class="wire" stroke="#4ecdc4" stroke-width="3" d="M240,420 C270,415 300,410 330,408"/>
+
+  <!-- 6 o'clock: Physics / Entropy / Drain (FAITH) -->
+  <path class="wire" stroke="#98e07d" stroke-width="6"
+        d="M600,700 C590,640 590,600 600,540" marker-end="url(#arrow)"/>
+  <path class="wire" stroke="#98e07d" stroke-width="3" d="M560,670 C575,660 585,650 592,635"/>
+  <path class="wire" stroke="#98e07d" stroke-width="3" d="M640,670 C625,660 615,650 608,635"/>
+
+  <!-- ====== Gated channels on afferents ====== -->
+  <!-- top gate (Experience Gate) -->
+  <g transform="translate(572,195)">
+    <rect class="gate" rx="6" ry="6" width="88" height="22"/>
+    <text x="44" y="15" text-anchor="middle">EXPERIENCE</text>
+  </g>
+  <!-- left gate (Persistence Gate) -->
+  <g transform="translate(312,378)">
+    <rect class="gate" rx="6" ry="6" width="120" height="22"/>
+    <text x="60" y="15" text-anchor="middle">PERSISTENCE</text>
+  </g>
+  <!-- bottom gate (Entropy Gate) -->
+  <g transform="translate(562,620)">
+    <rect class="gate" rx="6" ry="6" width="96" height="22"/>
+    <text x="48" y="15" text-anchor="middle">ENTROPY</text>
+  </g>
+
+  <!-- ====== Soma (splicing 3 inputs) ====== -->
+  <circle class="somaRing" cx="600" cy="400" r="78"/>
+  <circle class="somaCore" cx="600" cy="400" r="56"/>
+  <text class="label" x="600" y="398" text-anchor="middle">SOMA</text>
+  <text class="small" x="600" y="418" text-anchor="middle">splice(variation, persistence, entropy)</text>
+
+  <!-- ====== Axon at 3 o'clock ====== -->
+  <path class="wire" stroke="url(#axonGrad)" stroke-width="8"
+        d="M678,400 C760,398 840,398 920,400" />
+  <circle class="dot" cx="740" cy="398" r="2.5"/>
+  <circle class="dot" cx="780" cy="398" r="2.5"/>
+  <circle class="dot" cx="820" cy="398" r="2.5"/>
+
+  <!-- ====== N-terminal arborization to effectors ====== -->
+  <path class="wire" stroke="#c7d4ff" stroke-width="5"
+        d="M920,400 C980,370 1020,350 1080,330" marker-end="url(#arrow)"/>
+  <path class="wire" stroke="#c7d4ff" stroke-width="5"
+        d="M920,400 C980,400 1020,400 1080,400" marker-end="url(#arrow)"/>
+  <path class="wire" stroke="#c7d4ff" stroke-width="5"
+        d="M920,400 C980,430 1020,450 1080,470" marker-end="url(#arrow)"/>
+
+  <!-- effector nodes -->
+  <g transform="translate(1080,330)">
+    <rect class="node" x="-70" y="-18" width="140" height="36" rx="8"/>
+    <text x="0" y="4" text-anchor="middle">CELL → TISSUE</text>
+    <text class="micro" x="0" y="20" text-anchor="middle">functional unit (villus, alveolus, nephron)</text>
+  </g>
+  <g transform="translate(1080,400)">
+    <rect class="node" x="-70" y="-18" width="140" height="36" rx="8"/>
+    <text x="0" y="4" text-anchor="middle">ORGAN → SYSTEM</text>
+    <text class="micro" x="0" y="20" text-anchor="middle">fractal scaling / exchange / flow</text>
+  </g>
+  <g transform="translate(1080,470)">
+    <rect class="node" x="-70" y="-18" width="140" height="36" rx="8"/>
+    <text x="0" y="4" text-anchor="middle">GRID / MESH</text>
+    <text class="micro" x="0" y="20" text-anchor="middle">circuits • networks • recursion</text>
+  </g>
+
+  <!-- ====== Feedback loops ====== -->
+  <path class="feedback" d="M1010,330 C900,280 800,240 628,195" marker-end="url(#feedbackArrow)"/>
+  <path class="feedback" d="M1010,400 C920,450 800,480 700,460 C500,420 420,400 386,388" marker-end="url(#feedbackArrow)"/>
+  <path class="feedback" d="M1010,470 C900,520 800,560 628,620" marker-end="url(#feedbackArrow)"/>
+
+  <!-- ====== Layer badges around afferents (cleaned) ====== -->
+  <!-- 12 o'clock -->
+  <g text-anchor="middle">
+    <rect class="pill" x="508" y="98" rx="10" ry="10" width="184" height="46"/>
+    <text x="600" y="116">BIOLOGY / VARIATION</text>
+    <text class="micro" x="600" y="132">Experience • Dynamics</text>
+  </g>
+  <!-- 9 o'clock -->
+  <g>
+    <rect class="pill" x="112" y="312" rx="10" ry="10" width="236" height="46"/>
+    <text x="230" y="330">ONTOLOGY / PERSISTENCE</text>
+    <text class="micro" x="230" y="346">Rituals • Archives • Canon</text>
+  </g>
+  <!-- 6 o'clock -->
+  <g text-anchor="middle">
+    <rect class="pill" x="524" y="686" rx="10" ry="10" width="152" height="46"/>
+    <text x="600" y="704">PHYSICS / ENTROPY</text>
+    <text class="micro" x="600" y="720">Drain • Noise • Decay</text>
+  </g>
+
+  <!-- ====== Faith, Hope, Love tokens ====== -->
+  <circle cx="600" cy="170" r="22" fill="#87ceeb" stroke="#ffffff" stroke-width="2"/>
+  <text x="600" y="176" text-anchor="middle" style="fill:#000;font:800 10px Inter;">LOVE</text>
+  <circle cx="350" cy="400" r="22" fill="#ffb6c1" stroke="#ffffff" stroke-width="2"/>
+  <text x="350" y="406" text-anchor="middle" style="fill:#000;font:800 10px Inter;">HOPE</text>
+  <circle cx="600" cy="630" r="22" fill="#a1f0b2" stroke="#ffffff" stroke-width="2"/>
+  <text x="600" y="636" text-anchor="middle" style="fill:#000;font:800 10px Inter;">FAITH</text>
+
+  <!-- ====== Extra badges ====== -->
+  <circle cx="750" cy="365" r="18" fill="#d8b4fe" stroke="#ffffff" stroke-width="1"/>
+  <text class="micro" x="750" y="371" text-anchor="middle" fill="#ffffff" font-weight="700">EFF</text>
+  <circle cx="750" cy="435" r="18" fill="#ffe081" stroke="#ffffff" stroke-width="1"/>
+  <text class="micro" x="750" y="441" text-anchor="middle" fill="#ffffff" font-weight="700">SUS</text>
+
+  <!-- ====== Metaphysics & Computation badges ====== -->
+  <g text-anchor="middle">
+    <rect class="pill" x="680" y="320" rx="10" ry="10" width="180" height="42"/>
+    <text x="770" y="338">METAPHYSICS / ENTERPRISE</text>
+    <text class="micro" x="770" y="354">Operations • Archetype/Franchise</text>
+  </g>
+  <g text-anchor="middle">
+    <rect class="pill" x="900" y="506" rx="10" ry="10" width="168" height="42"/>
+    <text x="984" y="524">COMPUTATION / SYSTEM</text>
+    <text class="micro" x="984" y="540">Existential • Grid resilience</text>
+  </g>
+
+  <!-- ====== “Persistence” tag on 9 o’clock branch ====== -->
+  <g transform="translate(360,360)">
+    <rect class="pill" x="-72" y="-16" rx="10" ry="10" width="144" height="32"/>
+    <text x="0" y="6" text-anchor="middle">PERSISTENCE (RITUALS)</text>
+  </g>
+
+  <!-- ====== Entropy spiral near 6 o’clock ====== -->
+  <g transform="translate(600,585) rotate(8)">
+    <path d="M0,0
+             m0,-10
+             a10,10 0 1,1 0,20
+             a10,10 0 1,1 0,-20
+             m0,4
+             a6,6 0 1,0 0,12
+             a6,6 0 1,0 0,-12
+             m0,3
+             a3,3 0 1,1 0,6
+             a3,3 0 1,1 0,-6"
+          fill="none" stroke="#a1f0b2" stroke-width="1.6" opacity="0.9"/>
+  </g>
+
+  <!-- ====== Title ====== -->
+  <text class="legend" x="600" y="60" text-anchor="middle">NEURON OF INTELLIGENCE</text>
+  <text class="sub" x="600" y="84" text-anchor="middle">variation (12) + persistence (9) + entropy (6) → splice → act</text>
+
+  <!-- ====== Mandala ring ====== -->
+  <circle class="ghost" cx="600" cy="400" r="310" fill="none" stroke-width="2" opacity="0.35"/>
+</svg>
